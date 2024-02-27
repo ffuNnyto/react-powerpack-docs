@@ -10,12 +10,19 @@ import GitHubIcon from '@/components/ui/githubico';
 
 
 
-export const ImportStyle= {
+export const ImportStyle = {
     backgroundColor: '',
     borderRadius: '2px',
     padding: 10,
     margin: 5,
     display: ''
+}
+
+export const CodeStyle = {
+    borderRadius: '2px',
+    padding: 0,
+    margin: 0,
+
 }
 
 export default function PageComponents() {
@@ -49,7 +56,7 @@ export default function PageComponents() {
                         <Separator />
                         <div className='p-2'>
                             <Title className='font-bold'>Import</Title>
-                            <Code style={getComponent.import_style} language={'jsx'} code={getComponent.import_code} />
+                            <Code textStyle='dark-plus' style={getComponent.import_style} language={'bash'} code={getComponent.import_code} />
                         </div>
                         <Separator />
                         <div className='p-2'>
@@ -63,7 +70,7 @@ export default function PageComponents() {
                                     {getComponent.example_component}
                                 </TabsContent>
                                 <TabsContent value='code'>
-                                    <Code style={getComponent.code_style} language='jsx' code={getComponent.example_code} />
+                                    <Code style={getComponent.code_style} textStyle='duotonesea' language='jsx' code={getComponent.example_code} />
                                 </TabsContent>
                             </Tabs>
                         </div>

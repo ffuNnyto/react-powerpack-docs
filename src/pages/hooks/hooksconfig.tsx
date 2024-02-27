@@ -1,4 +1,4 @@
-import { ImportStyle } from '../components';
+import { CodeStyle, ImportStyle } from '../components';
 import ExampleHookUseApi from './examples/example-useapi';
 import ExampleUseAsync from './examples/example-useasync';
 import ExampleClickOutSide from './examples/example-useclickoutside';
@@ -29,12 +29,7 @@ export const getHookByName = (name: string) => {
             source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/hooks/useapi/useapi.ts',
             import_code: `import { useApi } from 'react-powerpack'`,
             import_style: ImportStyle,
-            code_style: {
-                borderRadius: '2px',
-                padding: 0,
-                margin: 0,
-                background: 'rgba(0,0,0,0.5)'
-            },
+            code_style: CodeStyle,
             example_code: `
 let customRequest = useApi('https://randomuser.me/api/', 'get', { useCredentials: true })
 
@@ -50,12 +45,7 @@ let { request, data, error } = useApi('https://randomuser.me/api/', 'get', { use
             source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/hooks/useasync/useasync.ts',
             import_code: `import { useAsync } from 'react-powerpack'`,
             import_style: ImportStyle,
-            code_style: {
-                borderRadius: '2px',
-                padding: 0,
-                margin: 0,
-                background: 'rgba(0,0,0,0.5)'
-            },
+            code_style: CodeStyle,
             example_code: `
 function App() {
 
@@ -90,12 +80,7 @@ function App() {
             source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/hooks/usecallback/usecallback.ts',
             import_code: `import { useLastCallback } from 'react-powerpack'`,
             import_style: ImportStyle,
-            code_style: {
-                borderRadius: '2px',
-                padding: 0,
-                margin: 0,
-                background: 'rgba(0,0,0,0.5)'
-            },
+            code_style: CodeStyle,
             example_code: `
 function App() {
 
@@ -124,12 +109,7 @@ function App() {
             source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/hooks/usetimeout/usetimeout.ts',
             import_code: `import { useTimeOut } from 'react-powerpack'`,
             import_style: ImportStyle,
-            code_style: {
-                borderRadius: '2px',
-                padding: 0,
-                margin: 0,
-                background: 'rgba(0,0,0,0.5)'
-            },
+            code_style: CodeStyle,
             example_code: `
 function App() {
 
@@ -165,12 +145,7 @@ function App() {
             source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/hooks/useclickoutside/useclickoutside.ts',
             import_code: `import { useClickOutside } from 'react-powerpack'`,
             import_style: ImportStyle,
-            code_style: {
-                borderRadius: '2px',
-                padding: 0,
-                margin: 0,
-                background: 'rgba(0,0,0,0.5)'
-            },
+            code_style: CodeStyle,
             example_code: `
 function App() {
 
@@ -200,12 +175,7 @@ function App() {
             source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/hooks/usedisclosure/usedisclosure.ts',
             import_code: `import { useDisclosure } from 'react-powerpack'`,
             import_style: ImportStyle,
-            code_style: {
-                borderRadius: '2px',
-                padding: 0,
-                margin: 0,
-                background: 'rgba(0,0,0,0.5)'
-            },
+            code_style: CodeStyle,
             example_code: `
 function App() {
 
@@ -236,12 +206,7 @@ function App() {
             source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/hooks/usetoggle/usetoggle.ts',
             import_code: `import { useDisclosure } from 'react-powerpack'`,
             import_style: ImportStyle,
-            code_style: {
-                borderRadius: '2px',
-                padding: 0,
-                margin: 0,
-                background: 'rgba(0,0,0,0.5)'
-            },
+            code_style: CodeStyle,
             example_code: `
 function App() {
 

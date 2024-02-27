@@ -1,4 +1,4 @@
-import { ImportStyle } from '../components';
+import { CodeStyle, ImportStyle } from '../components';
 import ExampleClickOutsideComponent from './examples/example-clickoutside';
 import ExampleEach from './examples/example-each';
 import ExampleShow from './examples/example-show';
@@ -24,12 +24,7 @@ export const getComponentByName = (name: string) => {
             source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/components/show/show.tsx',
             import_code: `import { Show } from 'react-powerpack'`,
             import_style: ImportStyle,
-            code_style: {
-                borderRadius: '2px',
-                padding: 0,
-                margin: 0,
-                background: 'rgba(0,0,0,0.5)'
-            },
+            code_style: CodeStyle,
             example_code: `
 function App() {
 
@@ -58,12 +53,7 @@ function App() {
             source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/components/foreach/each.ts',
             import_code: `import { Each } from 'react-powerpack'`,
             import_style: ImportStyle,
-            code_style: {
-                borderRadius: '2px',
-                padding: 0,
-                margin: 0,
-                background: 'rgba(0,0,0,0.5)'
-            },
+            code_style: CodeStyle,
             example_code: `
 function App() {
     
@@ -86,12 +76,7 @@ function App() {
             source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/components/clickoutsidecomponent/clickoutsidecomponent.tsx',
             import_code: `import { ClickOutsideComponent } from 'react-powerpack'`,
             import_style: ImportStyle,
-            code_style: {
-                borderRadius: '2px',
-                padding: 0,
-                margin: 0,
-                background: 'rgba(0,0,0,0.5)'
-            },
+            code_style: CodeStyle,
             example_code: `
 function App() {
     

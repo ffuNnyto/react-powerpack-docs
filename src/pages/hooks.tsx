@@ -40,7 +40,7 @@ export default function PageHooks() {
                         <Separator />
                         <div className='p-2'>
                             <Title className='font-bold'>Import</Title>
-                            <Code style={getComponent.import_style} language={'jsx'} code={getComponent.import_code} />
+                            <Code textStyle='dark-plus' style={getComponent.import_style} language={'bash'} code={getComponent.import_code} />
                         </div>
                         <Separator />
                         <div className='p-2'>
@@ -54,7 +54,7 @@ export default function PageHooks() {
                                     {getComponent.example_component}
                                 </TabsContent>
                                 <TabsContent value='code'>
-                                    <Code style={getComponent.code_style} language='jsx' code={getComponent.example_code} />
+                                    <Code style={getComponent.code_style} textStyle='duotonesea' language='jsx' code={getComponent.example_code} />
                                 </TabsContent>
                             </Tabs>
                         </div>
