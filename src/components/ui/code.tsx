@@ -28,7 +28,7 @@ export const getTheme = (theme: ThemeType) => {
 
 const Code: React.FC<CodeProps> = ({ language, code, textStyle, style }) => {
   return (
-    <SyntaxHighlighter language={language} style={getTheme(textStyle ? textStyle : 'duotonesea')} wrapLongLines>
+    <SyntaxHighlighter language={language} customStyle={style} style={getTheme(textStyle ? textStyle : 'duotonesea')} wrapLongLines>
       {code}
     </SyntaxHighlighter>
   );

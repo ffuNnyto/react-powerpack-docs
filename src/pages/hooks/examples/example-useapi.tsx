@@ -5,7 +5,7 @@ import { Show, useApi } from 'react-powerpack'
 
 export default function ExampleHookUseApi() {
 
-    let { request, data, error } = useApi('https://randomuser.me/api/', 'get')
+    let { request, data} = useApi('https://randomuser.me/api/', 'get')
 
     useEffect(() => {
         request();
