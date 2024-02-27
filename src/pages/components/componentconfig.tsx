@@ -26,25 +26,25 @@ export const getComponentByName = (name: string) => {
             import_style: ImportStyle,
             code_style: CodeStyle,
             example_code: `
-function App() {
+    export function App() {
 
-    const [visible,setVisible] = useState(false)
-            
-    return (
-            <Show>
-                <Show.When isTrue={visible}>
-                    <div className='bg-blue-500 rounded-xl p-2'>
-                        This show when is visible
-                    </div>
-                </Show.When>
-                <Show.Else>
-                    <div className='bg-red-500 rounded-xl p-2'>
-                        This show when is invisible
-                    </div>
-                </Show.Else>
-            </Show>
-    )
-}`,
+        const [visible,setVisible] = useState(false)
+                
+        return (
+                <Show>
+                    <Show.When isTrue={visible}>
+                        <div className='bg-blue-500 rounded-xl p-2'>
+                            This show when is visible
+                        </div>
+                    </Show.When>
+                    <Show.Else>
+                        <div className='bg-red-500 rounded-xl p-2'>
+                            This show when is invisible
+                        </div>
+                    </Show.Else>
+                </Show>
+        )
+    }`,
             example_component: <ExampleShow />
         },
         'each': {
@@ -55,19 +55,19 @@ function App() {
             import_style: ImportStyle,
             code_style: CodeStyle,
             example_code: `
-function App() {
-    
-    const [nums,setNums] = useState([0,1,2,3,4,5])
-           
-    return(
-            <Each of={nums} render={(num, index) => 
-                <div>
-                    render {num}
-                </div>
-           
-            } />
-    )
-}`,
+    export function App() {
+        
+        const [nums,setNums] = useState([0,1,2,3,4,5])
+            
+        return(
+                <Each of={nums} render={(num, index) => 
+                    <div>
+                        render {num}
+                    </div>
+            
+                } />
+        )
+    }`,
             example_component: <ExampleEach />
         },
         'clickoutsidecomponent': {
@@ -78,22 +78,22 @@ function App() {
             import_style: ImportStyle,
             code_style: CodeStyle,
             example_code: `
-function App() {
-    
-    const [text, setText] = useState('Click me')
+    export function App() {
+        
+        const [text, setText] = useState('Click me')
 
-    const onClickOutside = () => {
-        setText('You Click Outside,Click me again')
-    }
-           
-    return(
-            <ClickOutsideComponent onClickOutside={onClickOutside}>
-                <button onClick={()=>setText('Click me')}>
-                    {text}
-                </button>
-            </ClickOutsideComponent>
-    )
-}`,
+        const onClickOutside = () => {
+            setText('You Click Outside,Click me again')
+        }
+            
+        return(
+                <ClickOutsideComponent onClickOutside={onClickOutside}>
+                    <button onClick={()=>setText('Click me')}>
+                        {text}
+                    </button>
+                </ClickOutsideComponent>
+        )
+    }`,
             example_component: <ExampleClickOutsideComponent />
         }
     };

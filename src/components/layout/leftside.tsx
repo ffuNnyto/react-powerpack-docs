@@ -88,13 +88,13 @@ export default function LeftSide({ mobile }: { mobile: boolean }) {
                         <Separator className='mt-2' />
                     </li>
                     <li>
-                        <button onClick={handleToggleComponents} type='button' className='flex items-center w-full p-2 text-base transition duration-75 rounded-lg group' aria-controls='dropdown-example' data-collapse-toggle='dropdown-example'>
+                        <div onClick={handleToggleComponents} className='cursor-pointer flex items-center w-full p-2 text-base transition duration-75 rounded-lg' aria-controls='dropdown-example' data-collapse-toggle='dropdown-example'>
 
                             <span className='flex-1 ms-3 text-left rtl:text-right whitespace-nowrap'>Components</span>
                             <svg className='w-3 h-3' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'>
                                 <path stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='m1 1 4 4 4-4' />
                             </svg>
-                        </button>
+                        </div>
                         <ul className='items-center ml-10'>
                             <Show>
                                 <Show.When isTrue={toggledComponents === '1'}>
@@ -112,13 +112,13 @@ export default function LeftSide({ mobile }: { mobile: boolean }) {
                         <Separator />
                     </li>
                     <li>
-                        <button onClick={handleToggleHooks} type='button' className='flex items-center w-full p-2 text-base transition duration-75 rounded-lg group' aria-controls='dropdown-example' data-collapse-toggle='dropdown-example'>
+                        <div onClick={handleToggleHooks} className='cursor-pointer  flex items-center w-full p-2 text-base transition duration-75 rounded-lg group' aria-controls='dropdown-example' data-collapse-toggle='dropdown-example'>
 
                             <span className='flex-1 ms-3 text-left rtl:text-right whitespace-nowrap'>Hooks</span>
                             <svg className='w-3 h-3' aria-hidden='true' xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'>
                                 <path stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='m1 1 4 4 4-4' />
                             </svg>
-                        </button>
+                        </div>
                         <ul className='items-center ml-10'>
                             <Show>
                                 <Show.When isTrue={toggledHooks === '1'}>
