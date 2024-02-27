@@ -8,6 +8,16 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { getComponentByName } from './components/componentconfig';
 import GitHubIcon from '@/components/ui/githubico';
 
+
+
+export const ImportStyle= {
+    backgroundColor: '',
+    borderRadius: '2px',
+    padding: 10,
+    margin: 5,
+    display: ''
+}
+
 export default function PageComponents() {
 
     let path = useLocation().pathname.split('/')[2]

@@ -1,3 +1,4 @@
+import { ImportStyle } from '../components';
 import ExampleClickOutsideComponent from './examples/example-clickoutside';
 import ExampleEach from './examples/example-each';
 import ExampleShow from './examples/example-show';
@@ -22,13 +23,7 @@ export const getComponentByName = (name: string) => {
             description: 'Conditional Renderer',
             source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/components/show/show.tsx',
             import_code: `import { Show } from 'react-powerpack'`,
-            import_style: {
-                backgroundColor: 'white',
-                borderRadius: '2px',
-                padding: 2,
-                margin: 2,
-                display: 'inline-flex'
-            },
+            import_style: ImportStyle,
             code_style: {
                 borderRadius: '2px',
                 padding: 0,
@@ -62,13 +57,7 @@ function App() {
             description: 'Dynamic List Renderer',
             source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/components/foreach/each.ts',
             import_code: `import { Each } from 'react-powerpack'`,
-            import_style: {
-                backgroundColor: 'white',
-                borderRadius: '2px',
-                padding: 2,
-                margin: 2,
-                display: 'inline-flex'
-            },
+            import_style: ImportStyle,
             code_style: {
                 borderRadius: '2px',
                 padding: 0,
@@ -96,13 +85,7 @@ function App() {
             description: 'Component for handling external clicks',
             source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/components/clickoutsidecomponent/clickoutsidecomponent.tsx',
             import_code: `import { ClickOutsideComponent } from 'react-powerpack'`,
-            import_style: {
-                backgroundColor: 'white',
-                borderRadius: '2px',
-                padding: 2,
-                margin: 2,
-                display: 'inline-flex'
-            },
+            import_style: ImportStyle,
             code_style: {
                 borderRadius: '2px',
                 padding: 0,

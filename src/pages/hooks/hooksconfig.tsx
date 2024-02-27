@@ -1,3 +1,4 @@
+import { ImportStyle } from '../components';
 import ExampleHookUseApi from './examples/example-useapi';
 import ExampleUseAsync from './examples/example-useasync';
 import ExampleClickOutSide from './examples/example-useclickoutside';
@@ -27,13 +28,7 @@ export const getHookByName = (name: string) => {
             description: 'Custom Axios Hook',
             source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/hooks/useapi/useapi.ts',
             import_code: `import { useApi } from 'react-powerpack'`,
-            import_style: {
-                backgroundColor: 'white',
-                borderRadius: '2px',
-                padding: 2,
-                margin: 2,
-                display: 'inline-flex'
-            },
+            import_style: ImportStyle,
             code_style: {
                 borderRadius: '2px',
                 padding: 0,
@@ -54,13 +49,7 @@ let { request, data, error } = useApi('https://randomuser.me/api/', 'get', { use
             description: 'Handles asynchronous operations',
             source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/hooks/useasync/useasync.ts',
             import_code: `import { useAsync } from 'react-powerpack'`,
-            import_style: {
-                backgroundColor: 'white',
-                borderRadius: '2px',
-                padding: 2,
-                margin: 2,
-                display: 'inline-flex'
-            },
+            import_style: ImportStyle,
             code_style: {
                 borderRadius: '2px',
                 padding: 0,
@@ -100,13 +89,7 @@ function App() {
             description: 'Remembers the last callback function',
             source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/hooks/usecallback/usecallback.ts',
             import_code: `import { useLastCallback } from 'react-powerpack'`,
-            import_style: {
-                backgroundColor: 'white',
-                borderRadius: '2px',
-                padding: 2,
-                margin: 2,
-                display: 'inline-flex'
-            },
+            import_style: ImportStyle,
             code_style: {
                 borderRadius: '2px',
                 padding: 0,
@@ -140,13 +123,7 @@ function App() {
             description: 'Executes a function after a delay',
             source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/hooks/usetimeout/usetimeout.ts',
             import_code: `import { useTimeOut } from 'react-powerpack'`,
-            import_style: {
-                backgroundColor: 'white',
-                borderRadius: '2px',
-                padding: 2,
-                margin: 2,
-                display: 'inline-flex'
-            },
+            import_style: ImportStyle,
             code_style: {
                 borderRadius: '2px',
                 padding: 0,
@@ -187,13 +164,7 @@ function App() {
             description: 'Hook for detecting clicks outside',
             source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/hooks/useclickoutside/useclickoutside.ts',
             import_code: `import { useClickOutside } from 'react-powerpack'`,
-            import_style: {
-                backgroundColor: 'white',
-                borderRadius: '2px',
-                padding: 2,
-                margin: 2,
-                display: 'inline-flex'
-            },
+            import_style: ImportStyle,
             code_style: {
                 borderRadius: '2px',
                 padding: 0,
@@ -228,13 +199,7 @@ function App() {
             description: 'Manage modal or panel visibility',
             source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/hooks/usedisclosure/usedisclosure.ts',
             import_code: `import { useDisclosure } from 'react-powerpack'`,
-            import_style: {
-                backgroundColor: 'white',
-                borderRadius: '2px',
-                padding: 2,
-                margin: 2,
-                display: 'inline-flex'
-            },
+            import_style: ImportStyle,
             code_style: {
                 borderRadius: '2px',
                 padding: 0,
@@ -270,13 +235,7 @@ function App() {
             description: 'Toggle boolean state',
             source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/hooks/usetoggle/usetoggle.ts',
             import_code: `import { useDisclosure } from 'react-powerpack'`,
-            import_style: {
-                backgroundColor: 'white',
-                borderRadius: '2px',
-                padding: 2,
-                margin: 2,
-                display: 'inline-flex'
-            },
+            import_style: ImportStyle,
             code_style: {
                 borderRadius: '2px',
                 padding: 0,
