@@ -11,11 +11,11 @@ interface CodeProps {
 
 type ThemeType = 'dark-plus' | 'duotonesea' | 'onedark';
 
-const themesMap: Record<ThemeType, any> = {
+const themesMap: Record<ThemeType, { [key: string]: React.CSSProperties }> = {
   'dark-plus': vscDarkPlus,
   'duotonesea': duotoneSea,
   'onedark': oneDark
-};
+}
 
 const getTheme = (theme: ThemeType) => themesMap[theme] || duotoneSea;
 

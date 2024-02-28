@@ -1,8 +1,8 @@
-import { Each, Show } from 'react-powerpack'
-import { Link } from 'react-router-dom'
+import { Each, Show, useLocalStorage } from 'react-powerpack'
+import { Link, NavLink } from 'react-router-dom'
 import { Separator } from '../ui/separator'
-import useLocalStorage from '@/hooks/useLocalStorage'
 import { useEffect } from 'react'
+import { FaGithub, FaTwitter, FaNpm } from "react-icons/fa";
 
 
 
@@ -59,13 +59,12 @@ export default function LeftSide({ mobile }: { mobile: boolean }) {
     const [toggledComponents, toggleComponents] = useLocalStorage<string>('components_accordion', '0');
     const [toggledHooks, toggleHooks] = useLocalStorage<string>('hooks_accordion', '0');
 
-    const handleToggleComponents = () => {
+    const handleToggleComponents = () =>
         toggleComponents(toggledComponents === '0' ? '1' : '0')
-    }
 
-    const handleToggleHooks = () => {
+    const handleToggleHooks = () =>
         toggleHooks(toggledHooks === '0' ? '1' : '0')
-    }
+
 
 
 
@@ -82,9 +81,10 @@ export default function LeftSide({ mobile }: { mobile: boolean }) {
             <div className='h-full px-3 py-4 overflow-y-auto '>
                 <ul className='space-y-2'>
                     <li>
-                        <Link className='flex items-center p-2 rounded-lg group' to='/home'>
-                            <span className='ms-3'>Home</span>
-                        </Link>
+                        <NavLink className='flex p-2 rounded-lg group items-center' to='/home'>
+                            <img src='/react.svg' width={50} />
+                            <span className='ms-3 font-bold'>PowerPack</span>
+                        </NavLink>
                         <Separator className='mt-2' />
                     </li>
                     <li>
@@ -100,9 +100,9 @@ export default function LeftSide({ mobile }: { mobile: boolean }) {
                                 <Show.When isTrue={toggledComponents === '1'}>
                                     <Each of={components} render={(data, index) =>
                                         <li className='items-center mt-5 cursor-pointer hover:text-yellow-500' key={index}>
-                                            <Link to={data.url} className='font-bold break-words'>
+                                            <NavLink to={data.url} className='font-bold break-words ease-in'>
                                                 {data.value}
-                                            </Link>
+                                            </NavLink>
                                             <Separator />
                                         </li>
                                     } />
@@ -124,9 +124,9 @@ export default function LeftSide({ mobile }: { mobile: boolean }) {
                                 <Show.When isTrue={toggledHooks === '1'}>
                                     <Each of={hooks} render={(data, index) =>
                                         <li className='items-center mt-5 cursor-pointer hover:text-yellow-500' key={index}>
-                                            <Link to={data.url} className='font-bold break-words'>
+                                            <NavLink to={data.url} className='font-bold break-words'>
                                                 {data.value}
-                                            </Link>
+                                            </NavLink>
                                             <Separator />
                                         </li>
                                     } />
@@ -136,9 +136,25 @@ export default function LeftSide({ mobile }: { mobile: boolean }) {
                         <Separator />
                     </li>
                     <li>
-                        <a href='#' className='flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group'>
-                            <span className='flex-1 ms-3 whitespace-nowrap'>INFO</span>
-                        </a>
+
+                        <div className="grid grid-cols-3 gap-2 w-full mt-10">
+                            <Link target='_blank' to='https://github.com/ffuNnyto/react-powerpack'>
+                                <FaGithub className='mx-auto' size={22} />
+                            </Link>
+                            <Link target='_blank' to='https://www.npmjs.com/package/react-powerpack'>
+                                <FaNpm className='mx-auto' size={22} />
+                            </Link>
+                            <Link target='_blank' to='https://twitter.com/ffuNnyto'>
+                                <FaTwitter className='mx-auto' size={22} />
+                            </Link>
+                        </div>
+
+                        <div className='flex justify-center w-full mt-10'>
+
+
+
+                        </div>
+
                     </li>
 
                 </ul>

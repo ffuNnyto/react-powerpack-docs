@@ -6,7 +6,7 @@ import { Title } from '@/components/title';
 import Code from '@/components/ui/code';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { getComponentByName } from './components/componentconfig';
-import GitHubIcon from '@/components/ui/githubico';
+import { FaGithub } from "react-icons/fa";
 import { getHookByName } from './hooks/hooksconfig';
 
 
@@ -51,7 +51,7 @@ export default function PageResources() {
             'hooks': () => getHookByName(path.toLowerCase()),
             'components': () => getComponentByName(path.toLowerCase())
         };
-        
+
         const routeFunction = routeHandler[type as RouteHandlerType] || routeHandler['components']
 
         return routeFunction();
@@ -79,7 +79,7 @@ export default function PageResources() {
                                 <div className='flex items-center'>
                                     <Link target='_blank' to={getComponent.source_code}>- Source: <span className='italic underline'>View Source Code</span></Link>
                                     <span>
-                                        <GitHubIcon className='ml-1' fill='#fff' />
+                                        <FaGithub className='ml-2' />
                                     </span>
                                 </div>
                             </div>

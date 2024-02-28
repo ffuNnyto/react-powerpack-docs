@@ -8,8 +8,8 @@ import {
 
 export default function FAQ() {
   return (
-    <Accordion type='single' collapsible className='w-full'>
-      <AccordionItem value='item-1'>
+    <Accordion  type='multiple' className='w-full'>
+      <AccordionItem  value='item-1'>
         <AccordionTrigger>What is React PowerPack?</AccordionTrigger>
         <AccordionContent className='italic font-bold m-2'>
           - React PowerPack is a comprehensive library of components and hooks for React applications. It provides developers with a rich set of tools to simplify UI development and streamline common tasks

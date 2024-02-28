@@ -1,7 +1,7 @@
-import useLocalStorage from '@/hooks/useLocalStorage';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '../lib/utils';
+import { useLocalStorage } from 'react-powerpack';
 
 interface MainNavProps extends React.HTMLAttributes<HTMLElement> {
   className?: string;

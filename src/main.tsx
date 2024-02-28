@@ -1,5 +1,4 @@
 import './../app/globals.css';
-import 'react-syntax-highlighter/dist/esm/styles/prism';
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import PageHome from './pages/home.tsx'
@@ -12,18 +11,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <ThemeProvider defaultTheme='dark'>
       <BrowserRouter>
         <Routes>
-
           <Route path='/*' element={<PageHome />} />
           <Route path='/components/*' element={<PageResources />} />
           <Route path='/hooks/*' element={<PageResources />} />
-          {/**<Route path='/components/*' element={<PageHooks />} /> */}
-
-
-
         </Routes>
       </BrowserRouter>
-
     </ThemeProvider>
-
   </React.StrictMode>,
 )

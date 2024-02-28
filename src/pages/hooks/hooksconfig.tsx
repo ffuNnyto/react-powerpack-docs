@@ -31,11 +31,25 @@ export const getHookByName = (name: string) => {
             import_style: ImportStyle,
             code_style: CodeStyle,
             example_code: `
-    let customRequest = useApi('https://randomuser.me/api/', 'get', { useCredentials: true })
+    export function App() {
+        let { request, data} = useApi('https://randomuser.me/api/', 'get')
 
-    let { request, data, error } = useApi('https://randomuser.me/api/', 'get')
+        //let { request, data, error } = useApi('https://randomuser.me/api/', 'get')
 
-    let { request, data, error } = useApi('https://randomuser.me/api/', 'get', { useCredentials: true, authorization: { scheme: 'Bearer', token: 'YOUR_TOKEN' } })
+        //let { request, data, error } = useApi('https://randomuser.me/api/', 'get', { useCredentials: true, authorization: { scheme: 'Bearer', token: 'YOUR_TOKEN' } })    
+        
+        return (
+            <Show>
+                <Show.When isTrue={data !== null}>
+                    {JSON.stringify(data, null, 2)}
+                </Show.When>
+                <Show.Else>
+                    <div>request error</div>
+                </Show.Else>
+            </Show>
+        )
+    }
+    
     `,
             example_component: <ExampleHookUseApi />
         },
@@ -95,8 +109,8 @@ export const getHookByName = (name: string) => {
         return (
             <div className='p-5 items-center border-2 rounded-xl flex'>
                 <p >Count: {count}</p>
-                <button className='ml-4' variant='secondary' onClick={increment}>Increment</button>
-                <button className='ml-4' variant='secondary' onClick={lastIncrement}>Last Increment</button>
+                <button variant='secondary' onClick={increment}>Increment</button>
+                <button variant='secondary' onClick={lastIncrement}>Last Increment</button>
             </div>
                 
         )

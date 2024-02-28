@@ -19,14 +19,19 @@ export default function ExampleEach() {
         setItems(newItems);
     }
 
+    const removeAll = () => {
+        setItems([])
+    }
 
-    return(
+
+    return (
         <div className='p-2 border-2 rounded-xl'>
             <Code language='jsx' style={{}} code={`const [items, setItems] = useState([${items.join(',')}])`} />
 
             <div className='example-buttons'>
                 <Button onClick={addItem} className='m-2'>Add Item</Button>
                 <Button onClick={removeItem} className='m-2'>Remove Item</Button>
+                <Button onClick={removeAll} className='m-2'>Remove All</Button>
             </div>
 
             <Separator />
@@ -35,7 +40,7 @@ export default function ExampleEach() {
                 <Each of={items} render={(item, index) =>
                     <div key={index}>
                         <div className='flex flex-wrap'>
-                            <div className='flex bg-[rgba(0,0,0,0.5)] m-2 p-1 rounded-xl shadow-xl'>
+                            <div className='flex border-2 m-2 p-1 rounded-xl shadow-xl'>
                                 item: {item} with key = {index}
                             </div>
                         </div>
