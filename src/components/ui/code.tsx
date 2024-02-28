@@ -1,34 +1,27 @@
 import React from 'react';
-import { PrismAsyncLight as SyntaxHighlighter } from 'react-syntax-highlighter';
-//import prism from 'react-syntax-highlighter/dist/esm/styles/prism/duotone-sea';
-import { vscDarkPlus, duotoneSea,oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
-
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus, duotoneSea, oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 interface CodeProps {
-  language: string
-  code: string
-  style: React.CSSProperties
-  textStyle?: ThemeType
+  language: string;
+  code: string;
+  textStyle?: ThemeType;
+  style?: React.CSSProperties;
 }
 
-type ThemeType = 'dark-plus' | 'duotonesea' | 'onedark'
+type ThemeType = 'dark-plus' | 'duotonesea' | 'onedark';
 
-export const getTheme = (theme: ThemeType) => {
-  switch (theme) {
-    case 'dark-plus':
-      return vscDarkPlus
-      case 'duotonesea':
-        return duotoneSea
-        case 'onedark':
-          return oneDark
-    default: duotoneSea;
-  }
+const themesMap: Record<ThemeType, any> = {
+  'dark-plus': vscDarkPlus,
+  'duotonesea': duotoneSea,
+  'onedark': oneDark
+};
 
-}
+const getTheme = (theme: ThemeType) => themesMap[theme] || duotoneSea;
 
-const Code: React.FC<CodeProps> = ({ language, code, textStyle, style }) => {
+const Code: React.FC<CodeProps> = ({ language, code, textStyle = 'duotonesea', style }) => {
   return (
-    <SyntaxHighlighter language={language} customStyle={style} style={getTheme(textStyle ? textStyle : 'duotonesea')} wrapLongLines>
+    <SyntaxHighlighter language={language} customStyle={style} style={getTheme(textStyle)} wrapLongLines>
       {code}
     </SyntaxHighlighter>
   );
