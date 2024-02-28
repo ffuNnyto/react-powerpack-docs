@@ -6,7 +6,7 @@ import KeyFeatures from '@/components/home/keyfeatures'
 import FAQ from '@/components/home/faq'
 
 
-function Home() {
+function PageHome() {
 
   return (
     <>
@@ -53,4 +53,4 @@ function Home() {
   )
 }
 
-export default Home
+export default PageHome

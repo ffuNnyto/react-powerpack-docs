@@ -1,12 +1,11 @@
+import './../app/globals.css';
+import 'react-syntax-highlighter/dist/esm/styles/prism';
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Home from './pages/home.tsx'
-import './../app/globals.css';
-import './index.css'
+import PageHome from './pages/home.tsx'
 import { ThemeProvider } from './components/theme-provider.tsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import PageComponents from './pages/components.tsx';
-import PageHooks from './pages/hooks.tsx';
+import PageResources from './pages/components.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -14,9 +13,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <BrowserRouter>
         <Routes>
 
-          <Route path='/*' element={<Home />} />
-          <Route path='/components/*' element={<PageComponents />} />
-          <Route path='/hooks/*' element={<PageHooks />} />
+          <Route path='/*' element={<PageHome />} />
+          <Route path='/components/*' element={<PageResources />} />
+          <Route path='/hooks/*' element={<PageResources />} />
+          {/**<Route path='/components/*' element={<PageHooks />} /> */}
 
 
 

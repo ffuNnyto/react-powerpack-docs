@@ -7,6 +7,7 @@ import Code from '@/components/ui/code';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { getComponentByName } from './components/componentconfig';
 import GitHubIcon from '@/components/ui/githubico';
+import { getHookByName } from './hooks/hooksconfig';
 
 
 
@@ -25,10 +26,40 @@ export const CodeStyle = {
 
 }
 
-export default function PageComponents() {
+export interface IComponentConfig {
+    title: string
+    description: string
+    source_code: string
+    import_code: string
+    import_style: React.CSSProperties,
+    code_style: React.CSSProperties,
+    example_code: string
+    example_component: React.ReactNode
+}
 
+export default function PageResources() {
+
+    let { pathname } = useLocation()
     let path = useLocation().pathname.split('/')[2]
-    let getComponent = getComponentByName(path.toLowerCase());
+
+    const getComponentByPath = () => {
+
+        const type = pathname.split('/')[1];
+        type RouteHandlerType = 'hooks' | 'components'
+
+        const routeHandler = {
+            'hooks': () => getHookByName(path.toLowerCase()),
+            'components': () => getComponentByName(path.toLowerCase())
+        };
+        
+        const routeFunction = routeHandler[type as RouteHandlerType] || routeHandler['components']
+
+        return routeFunction();
+    }
+
+
+
+    let getComponent = getComponentByPath();
 
     if (!getComponent)
         return <>error</>

@@ -1,19 +1,7 @@
-import { CodeStyle, ImportStyle } from '../components';
+import { CodeStyle, IComponentConfig, ImportStyle } from '../components';
 import ExampleClickOutsideComponent from './examples/example-clickoutside';
 import ExampleEach from './examples/example-each';
 import ExampleShow from './examples/example-show';
-
-
-interface IComponentConfig {
-    title: string
-    description: string
-    source_code: string
-    import_code: string
-    import_style: React.CSSProperties,
-    code_style: React.CSSProperties,
-    example_code: string
-    example_component: React.ReactNode
-}
 
 
 export const getComponentByName = (name: string) => {
