@@ -3,55 +3,11 @@ import { Link, NavLink } from 'react-router-dom'
 import { Separator } from '../ui/separator'
 import { useEffect } from 'react'
 import { FaGithub, FaTwitter, FaNpm } from "react-icons/fa";
+import { NavComponents, NavHooks } from '../lib/nav';
 
 
 
-const components = [
-    {
-        value: 'Show',
-        url: '/components/show'
-    },
-    {
-        value: 'Each',
-        url: '/components/each'
-    },
-    {
-        value: 'ClickOutsideComponent',
-        url: '/components/clickoutsidecomponent'
-    }
-]
 
-
-const hooks = [
-    {
-        value: 'useApi',
-        url: '/hooks/useapi'
-    },
-    {
-        value: 'useAsync',
-        url: '/hooks/useasync'
-    },
-    {
-        value: 'useLastCallback',
-        url: '/hooks/uselastcallback'
-    },
-    {
-        value: 'useTimeout',
-        url: '/hooks/usetimeout'
-    },
-    {
-        value: 'useClickOutside',
-        url: '/hooks/useclickoutside'
-    },
-    {
-        value: 'useDisclosure',
-        url: '/hooks/usedisclosure'
-    },
-    {
-        value: 'useToggle',
-        url: '/hooks/usetoggle'
-    }
-]
 
 
 export default function LeftSide({ mobile }: { mobile: boolean }) {
@@ -98,7 +54,7 @@ export default function LeftSide({ mobile }: { mobile: boolean }) {
                         <ul className='items-center ml-10'>
                             <Show>
                                 <Show.When isTrue={toggledComponents === '1'}>
-                                    <Each of={components} render={(data, index) =>
+                                    <Each of={NavComponents} render={(data, index) =>
                                         <li className='items-center mt-5 cursor-pointer hover:text-yellow-500' key={index}>
                                             <NavLink to={data.url} className='font-bold break-words ease-in'>
                                                 {data.value}
@@ -122,7 +78,7 @@ export default function LeftSide({ mobile }: { mobile: boolean }) {
                         <ul className='items-center ml-10'>
                             <Show>
                                 <Show.When isTrue={toggledHooks === '1'}>
-                                    <Each of={hooks} render={(data, index) =>
+                                    <Each of={NavHooks} render={(data, index) =>
                                         <li className='items-center mt-5 cursor-pointer hover:text-yellow-500' key={index}>
                                             <NavLink to={data.url} className='font-bold break-words'>
                                                 {data.value}

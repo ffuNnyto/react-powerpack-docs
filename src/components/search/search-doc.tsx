@@ -10,34 +10,17 @@ import { Input } from '../ui/input';
 import { Link } from 'react-router-dom';
 import { Each, Show, useDisclosure } from 'react-powerpack';
 import { useState } from 'react';
-
-
-
-
-
-
+import { NavComponents, NavHooks } from '../lib/nav';
 
 interface Item {
-    term: string
-    to: string
+    value: string
+    url: string
+    term?:string
 }
 
-const ItemsData: Item[] = [
-    { term: '<Show />', to: '/components/show' },
-    { term: '<Each />', to: '/components/each' },
-    { term: '<ClickOutSide />', to: '/components/clickoutsidecomponent' },
-    { term: 'useApi', to: '/hooks/useapi' },
-    { term: 'useAsync', to: '/hooks/useasync' },
-    { term: 'useLastCallback', to: '/hooks/uselastcallback' },
-    { term: 'useTimeout', to: '/hooks/usetimeout' },
-    { term: 'useClickOutside', to: '/hooks/useclickoutside' },
-    { term: 'useDisclosure', to: '/hooks/usedisclosure' },
-    { term: 'useToggle', to: '/hooks/usetoggle' }
-];
-
 const DefaultItems: Item[] = [
-    { term: 'Components', to: '/components/def' },
-    { term: 'Hooks', to: '/hooks/def' },
+    { value: 'Components', url: '/components/def' },
+    { value: 'Hooks', url: '/hooks/def' },
 ]
 
 
@@ -60,8 +43,10 @@ export default function SearchDoc({ trigger }: { trigger: JSX.Element }) {
     }
 
     const filterResults = (term: string) => {
-        const filteredResults = ItemsData.filter(Item =>
-            Item.term.toLowerCase().includes(term.toLowerCase())
+
+        let combineNavItems = [...NavComponents, ...NavHooks]
+        const filteredResults = combineNavItems.filter(Item =>
+            Item.value.toLowerCase().includes(term.toLowerCase())
         );
         setSearchResults(filteredResults);
     }
@@ -89,9 +74,9 @@ export default function SearchDoc({ trigger }: { trigger: JSX.Element }) {
                             <Show>
                                 <Show.When isTrue={searchResults.length > 0}>
                                     <Each of={searchResults} render={(item, index) =>
-                                        <Link to={item.to} key={index} onClick={close}>
-                                            <li className='bg-secondary p-3 m-2 rounded-lg' key={item.to}>
-                                                {item.term}
+                                        <Link to={item.url} key={index} onClick={close}>
+                                            <li className='bg-secondary p-3 m-2 rounded-lg' key={index}>
+                                                {item.term || item.value}
                                             </li>
                                         </Link>
                                     } />

@@ -1,7 +1,9 @@
 import { CodeStyle, IComponentConfig, ImportStyle } from '../components';
 import ExampleClickOutsideComponent from './examples/example-clickoutside';
 import ExampleEach from './examples/example-each';
+import ExampleInfiniteLoader from './examples/example-infiniteloader';
 import ExampleShow from './examples/example-show';
+import ExampleTextFit from './examples/example-textfit';
 
 
 export const getComponentByName = (name: string) => {
@@ -83,6 +85,85 @@ export const getComponentByName = (name: string) => {
         )
     }`,
             example_component: <ExampleClickOutsideComponent />
+        },
+        'textfit': {
+            title: 'TextFit',
+            description: 'Component for autoresizing text',
+            source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/components/textfit/textfit.tsx',
+            import_code: `import { TextFit } from 'react-powerpack'`,
+            import_style: ImportStyle,
+            code_style: CodeStyle,
+            example_code: `
+    export function App() {
+        
+      
+            
+        return(
+                <>
+                    <div style={{width:200,height:50}}>
+                        <TextFit>Hello World</TextFit>
+                    </div>
+                    <div style={{width:200,height:100}}>
+                        <TextFit>Hello World</TextFit>
+                    </div>
+                    <div style={{width:200,height:150}}>
+                        <TextFit>Hello World</TextFit>
+                    </div>
+                </>
+        )
+    }`,
+
+            example_component: <ExampleTextFit />
+        },
+        'infiniteloader': {
+            title: 'InfiniteLoader',
+            description: 'Component for updating data on scroll',
+            source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/components/infiniteloader/infiniteloader.tsx',
+            import_code: `import { InfiniteLoader } from 'react-powerpack'`,
+            import_style: ImportStyle,
+            code_style: CodeStyle,
+            example_code: `
+    export function App() {
+        const [numbers, setNumbers] = useState<number[]>(Array.from({ length: 10 }, (_, i) => i + 1));
+        const [isLoading, setIsLoading] = useState<boolean>(false);
+
+        const handleLoadMore = () => {
+            setIsLoading(true);
+            setNumbers(prevNumbers => [...prevNumbers, ...Array.from({ length: 10 }, (_, i) => prevNumbers.length + i + 1)]);
+            setIsLoading(false);
+        }
+
+        const CustomLoader = () => {
+            return <div>Loading...</div>;
+        }
+
+        const renderContent = () => {
+            return (
+                <ul>
+                    <Each of={numbers} render={(number, idx) =>
+                        <li key={idx}>
+                            item: {number} with index: {idx}
+                        </li>
+                    } />
+                </ul>
+            );
+        };
+        
+      
+            
+        return(
+            <div style={{overflow:'auto',maxHeight:'200px'}}>
+                <InfiniteLoader
+                    onLoadMore={handleLoadMore}
+                    isLoading={isLoading}
+                    renderContent={renderContent}
+                    loadingComponent={<CustomLoader />}
+                />
+            </div>
+        )
+    }`,
+
+            example_component: <ExampleInfiniteLoader />
         }
     };
 

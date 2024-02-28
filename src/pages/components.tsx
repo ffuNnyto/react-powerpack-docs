@@ -6,7 +6,7 @@ import { Title } from '@/components/title';
 import Code from '@/components/ui/code';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { getComponentByName } from './components/componentconfig';
-import { FaGithub } from "react-icons/fa";
+import { FaGithub } from 'react-icons/fa';
 import { getHookByName } from './hooks/hooksconfig';
 
 

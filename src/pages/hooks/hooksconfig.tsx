@@ -4,6 +4,7 @@ import ExampleUseAsync from './examples/example-useasync';
 import ExampleClickOutSide from './examples/example-useclickoutside';
 import ExampleUseDisclosure from './examples/example-usedisclosure';
 import ExampleUseLastCallback from './examples/example-uselastcallback';
+import ExampleUseLocalStorage from './examples/example-uselocalstorage';
 import ExampleUseTimeOut from './examples/example-usetimeout';
 import ExampleUseToggle from './examples/example-usetoggle';
 
@@ -236,6 +237,31 @@ export const getHookByName = (name: string) => {
         )
     }`,
             example_component: <ExampleUseToggle />
+        },
+        'uselocalstorage': {
+            title: 'useLocalStorage',
+            description: 'Manage localStorage data',
+            source_code: 'https://github.com/ffuNnyto/react-powerpack/blob/main/src/hooks/uselocalstorage/uselocalstorage.ts',
+            import_code: `import { useLocalStorage } from 'react-powerpack'`,
+            import_style: ImportStyle,
+            code_style: CodeStyle,
+            example_code: `
+    export function App() {
+
+        const [localStorageTest, setLocalStorageTest] = useLocalStorage('uselocalstorage', 'you can edit in realtime and check localstorage')
+        
+        const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+            setLocalStorageTest(event.target.value)
+        }
+
+        return (
+            <div>
+                <input value={localStorageTest} onChange={onChange} />
+            </div>
+                
+        )
+    }`,
+            example_component: <ExampleUseLocalStorage />
         }
 
     };
