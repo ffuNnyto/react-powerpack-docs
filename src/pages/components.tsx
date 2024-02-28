@@ -1,4 +1,4 @@
-import LeftSide from '@/components/layout/leftside';
+import LeftSide from '@/components/leftside/leftside';
 import { NavigationTopMenu } from '@/components/navigation/top-navigator';
 import { Link, useLocation } from 'react-router-dom';
 import { Separator } from '@/components/ui/separator';

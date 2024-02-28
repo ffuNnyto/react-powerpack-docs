@@ -1,5 +1,5 @@
 
-import LeftSideSheet from '../layout/leftside-sheet';
+import LeftSideSheet from '../leftside/leftside-sheet';
 import { useTheme } from '../theme-provider';
 import { Button } from '../ui/button';
 import { Search } from '../ui/search';
