@@ -7,7 +7,7 @@ import { MainNav } from './main-nav';
 import SearchDoc from '../search/search-doc';
 
 export function NavigationTopMenu() {
-    
+
     const { theme, setTheme } = useTheme()
     const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light')
 
@@ -23,6 +23,11 @@ export function NavigationTopMenu() {
                         </svg>
                     </div>
                 } />
+                <div data-drawer-target='sidebar-multi-level-sidebar' data-drawer-toggle='sidebar-multi-level-sidebar' aria-controls='sidebar-multi-level-sidebar' className='inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'>
+                    <Button onClick={toggleTheme} variant='secondary'>
+                        <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round' strokeLinejoin='round'><path d='M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0'></path><path d='M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7'></path></svg>
+                    </Button>
+                </div>
             </div>
             <div className='hidden flex-col md:flex z-10'>
                 <div className='border-b fixed w-full bg-background'>
