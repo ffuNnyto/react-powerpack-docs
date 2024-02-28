@@ -1,6 +1,6 @@
 import { NavigationTopMenu } from '../components/navigation/top-navigator'
 import LeftSide from '../components/leftside/leftside'
-import { Title } from '@/components/title'
+import { Title } from '@/components/ui/title'
 import Code from '@/components/ui/code'
 import KeyFeatures from '@/components/home/keyfeatures'
 import FAQ from '@/components/home/faq'

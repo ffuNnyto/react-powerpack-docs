@@ -8,7 +8,7 @@ import PageResources from './pages/components.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <ThemeProvider defaultTheme='dark'>
+    <ThemeProvider defaultTheme='light'>
       <BrowserRouter>
         <Routes>
           <Route path='/*' element={<PageHome />} />

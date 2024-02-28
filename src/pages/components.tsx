@@ -2,7 +2,7 @@ import LeftSide from '@/components/leftside/leftside';
 import { NavigationTopMenu } from '@/components/navigation/top-navigator';
 import { Link, useLocation } from 'react-router-dom';
 import { Separator } from '@/components/ui/separator';
-import { Title } from '@/components/title';
+import { Title } from '@/components/ui/title';
 import Code from '@/components/ui/code';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { getComponentByName } from './components/componentconfig';
@@ -11,33 +11,11 @@ import { getHookByName } from './hooks/hooksconfig';
 
 
 
-export const ImportStyle = {
-    backgroundColor: '',
-    borderRadius: '2px',
-    padding: 10,
-    margin: 5,
-    display: ''
-}
 
-export const CodeStyle = {
-    borderRadius: '2px',
-    padding: 0,
-    margin: 0,
-
-}
-
-export interface IComponentConfig {
-    title: string
-    description: string
-    source_code: string
-    import_code: string
-    import_style: React.CSSProperties,
-    code_style: React.CSSProperties,
-    example_code: string
-    example_component: React.ReactNode
-}
 
 export default function PageResources() {
+
+
 
     let { pathname } = useLocation()
     let path = useLocation().pathname.split('/')[2]
