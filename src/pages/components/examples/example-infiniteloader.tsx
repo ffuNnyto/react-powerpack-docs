@@ -23,10 +23,10 @@ export default function ExampleInfiniteLoader() {
         return (
 
             <Each of={numbers} render={(item, idx) =>
-                <div className='grid grid-cols-3'>
-                    <div grid-idx={idx} className='bg-pink-400 p-1 m-1 rounded-md'>Grid Item</div>
-                    <div grid-idx={idx} className='bg-blue-400 p-1 m-1 rounded-md'>Grid Item</div>
-                    <div grid-idx={idx} className='bg-pink-700 p-1 m-1 rounded-md'>Grid Item</div>
+                <div grid-idx={idx} className='grid grid-cols-3'>
+                    <div grid-item={item} className='bg-pink-400 p-1 m-1 rounded-md'>Grid Item</div>
+                    <div grid-item={item} className='bg-blue-400 p-1 m-1 rounded-md'>Grid Item</div>
+                    <div grid-item={item} className='bg-pink-700 p-1 m-1 rounded-md'>Grid Item</div>
                 </div>
             } />
 
