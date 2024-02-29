@@ -1,5 +1,5 @@
 
-import ExampleHookUseApi from './examples/example-useapi';
+import ExampleHookUseApi, { RequirementInfo } from './examples/example-useapi';
 import ExampleUseAsync from './examples/example-useasync';
 import ExampleClickOutSide from './examples/example-useclickoutside';
 import ExampleUseDisclosure from './examples/example-usedisclosure';
@@ -23,6 +23,7 @@ interface IHookConfig {
     import_code: string;
     import_style: React.CSSProperties;
     code_style: React.CSSProperties;
+    precomponent_info?:React.ReactNode
     example_code: string;
     example_component: React.ReactNode;
 }
@@ -53,6 +54,7 @@ const hookExamples: { [key: string]: IHookConfig } = {
         import_code: `${HOOK_IMPORT_BASE_URL} useApi } from 'react-powerpack'`,
         import_style: ImportStyle,
         code_style: CodeStyle,
+        precomponent_info: <RequirementInfo/>,
         example_code: UseApiCodeString,
         example_component: <ExampleHookUseApi />
     },

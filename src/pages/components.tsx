@@ -8,6 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { getComponentByName } from './components/componentconfig';
 import { FaGithub } from 'react-icons/fa';
 import { getHookByName } from './hooks/hooksconfig';
+import { Show } from 'react-powerpack';
 
 
 
@@ -51,11 +52,15 @@ export default function PageResources() {
                         <div className='p-2'>
                             <Title className='font-bold'>{getComponent.title}</Title>
                             <div className='description m-4'>
-                                <div>
+                                <div className='item-description'>
                                     <span>- Description: {getComponent.description}</span>
                                 </div>
                                 <div className='flex items-center'>
-                                    <Link target='_blank' to={getComponent.source_code}>- Source: <span className='italic underline'>View Source Code</span></Link>
+                                    <span>
+                                        - Source
+                                        <Link className='italic underline ml-1' target='_blank' to={getComponent.source_code}>View Source Code</Link>
+                                    </span>
+
                                     <span>
                                         <FaGithub className='ml-2' />
                                     </span>
@@ -67,7 +72,15 @@ export default function PageResources() {
                             <Title className='font-bold'>Import</Title>
                             <Code textStyle='dark-plus' style={getComponent.import_style} language={'bash'} code={getComponent.import_code} />
                         </div>
-                        <Separator />
+
+                        <Show>
+                            <Show.When isTrue={getComponent.precomponent_info !== null}>
+                                <Separator />
+                                {getComponent.precomponent_info}
+                                <Separator />
+                            </Show.When>
+                        </Show>
+
                         <div className='p-2'>
                             <Title className='font-bold'>Example</Title>
                             <Tabs defaultValue='usage' className='mt-2'>

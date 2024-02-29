@@ -19,6 +19,7 @@ interface IComponentConfig {
     import_code: string
     import_style: React.CSSProperties,
     code_style: React.CSSProperties,
+    precomponent_info?:React.ReactNode
     example_code: string
     example_component: React.ReactNode
 }

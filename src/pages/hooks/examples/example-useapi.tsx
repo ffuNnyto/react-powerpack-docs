@@ -1,11 +1,13 @@
 import { Button } from '@/components/ui/button';
 import Code from '@/components/ui/code';
+import { Title } from '@/components/ui/title';
 import { useEffect } from 'react'
 import { Show, useApi } from 'react-powerpack'
+import { Link } from 'react-router-dom';
 
 export default function ExampleHookUseApi() {
 
-    let { request, data} = useApi('https://randomuser.me/api/', 'get')
+    let { request, data } = useApi('https://randomuser.me/api/', 'get')
 
     useEffect(() => {
         request();
@@ -28,5 +30,27 @@ export default function ExampleHookUseApi() {
                 </Show.Else>
             </Show>
         </div>
+    )
+}
+
+export function RequirementInfo() {
+    return (
+
+        <div className='p-2'>
+            <Title className='font-bold'>Requirements</Title>
+            <div className='requirement_useapi_info'>
+                <div className='font-bold text-[17px] m-2'>- axios</div>
+                <div className='axios_npm_url m-2 font-italic underline'>
+                    <Link target='_blank' to='https://www.npmjs.com/package/axios'>
+                        Axios NPM
+                    </Link>
+                </div>
+                <div className='axios-description ml-2'>
+                    Promise based HTTP client for the browser and node.js
+                </div>
+                <Code language='bash' style={{}} textStyle='onedark' code='npm install axios' />
+            </div>
+        </div>
+
     )
 }

@@ -36,14 +36,10 @@ export default function ExampleEach() {
 
             <Separator />
 
-            <div className='show-example p-2 m-2'>
+            <div className='show-example p-2 m-2 flex flex-wrap mx-auto max-w-screen-sm'>
                 <Each of={items} render={(item, index) =>
-                    <div key={index}>
-                        <div className='flex flex-wrap'>
-                            <div className='flex border-2 m-2 p-1 rounded-xl shadow-xl'>
-                                item: {item} with key = {index}
-                            </div>
-                        </div>
+                    <div key={index} className='flex border-2 m-2 p-1 rounded-md shadow-xl bg-primary dark:bg-secondary'>
+                        item: {item} with key = {index}
                     </div>
                 } />
             </div>
