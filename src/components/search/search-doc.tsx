@@ -15,7 +15,7 @@ import { NavComponents, NavHooks } from '../lib/nav';
 interface Item {
     value: string
     url: string
-    term?:string
+    term?: string
 }
 
 const DefaultItems: Item[] = [
@@ -70,13 +70,14 @@ export default function SearchDoc({ trigger }: { trigger: JSX.Element }) {
                             className='w-full m-0 dark:hover:border-white border-dark'
                             autoFocus
                         />
-                        <ul>
+                        <ul className='max-h-[400px] overflow-auto'>
                             <Show>
                                 <Show.When isTrue={searchResults.length > 0}>
                                     <Each of={searchResults} render={(item, index) =>
                                         <Link to={item.url} key={index} onClick={close}>
-                                            <li className='bg-secondary p-3 m-2 rounded-lg' key={index}>
-                                                {item.term || item.value}
+                                            <li className='dark:bg-secondary bg-primary text-white dark:text-primary p-3 m-2 rounded-lg items-center' key={index}>
+                                                <input checked={false} type='radio' />
+                                                <span className='underline font-bold ml-2'>{item.term || item.value}</span>
                                             </li>
                                         </Link>
                                     } />

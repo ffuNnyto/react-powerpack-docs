@@ -55,10 +55,22 @@ export default function PageResources() {
                                 <div className='item-description'>
                                     <span>- Description: {getComponent.description}</span>
                                 </div>
+                                <Separator />
                                 <div className='flex items-center'>
                                     <span>
-                                        - Source
+                                        - Source:
                                         <Link className='italic underline ml-1' target='_blank' to={getComponent.source_code}>View Source Code</Link>
+                                    </span>
+
+                                    <span>
+                                        <FaGithub className='ml-2' />
+                                    </span>
+                                </div>
+                                <Separator />
+                                <div className='flex items-center'>
+                                    <span>
+                                        - Example Code:
+                                        <Link className='italic underline ml-1' target='_blank' to={getComponent.example_source_url}>View Source Code</Link>
                                     </span>
 
                                     <span>

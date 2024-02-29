@@ -38,7 +38,7 @@ export default function ExampleEach() {
 
             <div className='show-example p-2 m-2 flex flex-wrap mx-auto max-w-screen-sm'>
                 <Each of={items} render={(item, index) =>
-                    <div key={index} className='flex border-2 m-2 p-1 rounded-md shadow-xl bg-primary dark:bg-secondary'>
+                    <div key={index} className='flex border-2 m-2 p-1 rounded-md shadow-xl bg-primary dark:bg-secondary text-white dark:text-primary'>
                         item: {item} with key = {index}
                     </div>
                 } />

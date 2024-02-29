@@ -17,12 +17,12 @@ export default function ExampleShow() {
                 <Code style={{}} language='jsx' code={`const [visible, setVisible] = useState(${visible})`} />
                 <Show>
                     <Show.When isTrue={visible}>
-                        <div className='bg-primary text-black rounded-xl p-2'>
+                        <div className='text-white bg-pink-400 rounded-xl p-2'>
                             This show when is visible
                         </div>
                     </Show.When>
                     <Show.Else>
-                        <div className='bg-secondary rounded-xl p-2'>
+                        <div className='bg-blue-400 text-white rounded-xl p-2'>
                             This show when is invisible
                         </div>
                     </Show.Else>

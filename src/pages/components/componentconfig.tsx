@@ -19,7 +19,8 @@ interface IComponentConfig {
     import_code: string
     import_style: React.CSSProperties,
     code_style: React.CSSProperties,
-    precomponent_info?:React.ReactNode
+    precomponent_info?: React.ReactNode
+    example_source_url: string
     example_code: string
     example_component: React.ReactNode
 }
@@ -41,6 +42,7 @@ const CodeStyle = {
 
 const GITHUB_SOURCE_COMPONENTS_BASE_URL = process.env.GITHUB_SOURCE_COMPONENTS_BASE_URL;
 const COMPONENT_IMPORT_BASE_URL = process.env.COMPONENT_IMPORT_BASE_URL;
+const GITHUB_DOCS_EXAMPLE = process.env.GITHUB_DOCS_COMPONENTS_EXAMPLE;
 
 const componentExamples: { [key: string]: IComponentConfig } = {
     'show': {
@@ -51,6 +53,7 @@ const componentExamples: { [key: string]: IComponentConfig } = {
         code_style: CodeStyle,
         import_style: ImportStyle,
         example_code: ShowCodeString,
+        example_source_url: `${GITHUB_DOCS_EXAMPLE}/example-show.tsx`,
         example_component: <ExampleShow />
     },
     'each': {
@@ -61,6 +64,7 @@ const componentExamples: { [key: string]: IComponentConfig } = {
         code_style: CodeStyle,
         import_style: ImportStyle,
         example_code: EachCodeString,
+        example_source_url: `${GITHUB_DOCS_EXAMPLE}/example-each.tsx`,
         example_component: <ExampleEach />
     },
     'clickoutsidecomponent': {
@@ -71,6 +75,7 @@ const componentExamples: { [key: string]: IComponentConfig } = {
         code_style: CodeStyle,
         import_style: ImportStyle,
         example_code: ClickOutsideComponentCodeString,
+        example_source_url: `${GITHUB_DOCS_EXAMPLE}/example-clickoutside.tsx`,
         example_component: <ExampleClickOutsideComponent />
     },
     'textfit': {
@@ -81,6 +86,7 @@ const componentExamples: { [key: string]: IComponentConfig } = {
         code_style: CodeStyle,
         import_style: ImportStyle,
         example_code: TextFitCodeString,
+        example_source_url: `${GITHUB_DOCS_EXAMPLE}/example-textfit.tsx`,
         example_component: <ExampleTextFit />
     },
     'infiniteloader': {
@@ -91,6 +97,7 @@ const componentExamples: { [key: string]: IComponentConfig } = {
         code_style: CodeStyle,
         import_style: ImportStyle,
         example_code: InfiniteLoaderCodeString,
+        example_source_url: `${GITHUB_DOCS_EXAMPLE}/example-infiniteloader.tsx`,
         example_component: <ExampleInfiniteLoader />
     }
 };

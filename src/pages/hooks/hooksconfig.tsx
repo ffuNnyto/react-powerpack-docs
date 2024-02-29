@@ -17,15 +17,16 @@ import { UseTimeOutCodeString } from './string-code/usetimeout-code';
 import { UseToggleCodeString } from './string-code/usetoggle-code';
 
 interface IHookConfig {
-    title: string;
-    description: string;
-    source_code: string;
-    import_code: string;
-    import_style: React.CSSProperties;
-    code_style: React.CSSProperties;
+    title: string
+    description: string
+    source_code: string
+    import_code: string
+    import_style: React.CSSProperties
+    code_style: React.CSSProperties
     precomponent_info?:React.ReactNode
-    example_code: string;
-    example_component: React.ReactNode;
+    example_source_url: string
+    example_code: string
+    example_component: React.ReactNode
 }
 
 export const ImportStyle = {
@@ -45,6 +46,7 @@ export const CodeStyle = {
 
 const GITHUB_SOURCE_HOOKS_BASE_URL = process.env.GITHUB_SOURCE_HOOKS_BASE_URL;
 const HOOK_IMPORT_BASE_URL = process.env.COMPONENT_IMPORT_BASE_URL;
+const GITHUB_DOCS_EXAMPLE = process.env.GITHUB_DOCS_HOOKS_EXAMPLE;
 
 const hookExamples: { [key: string]: IHookConfig } = {
     'useapi': {
@@ -56,6 +58,7 @@ const hookExamples: { [key: string]: IHookConfig } = {
         code_style: CodeStyle,
         precomponent_info: <RequirementInfo/>,
         example_code: UseApiCodeString,
+        example_source_url: `${GITHUB_DOCS_EXAMPLE}/example-useapi.tsx`,
         example_component: <ExampleHookUseApi />
     },
     'useasync': {
@@ -66,6 +69,7 @@ const hookExamples: { [key: string]: IHookConfig } = {
         import_style: ImportStyle,
         code_style: CodeStyle,
         example_code: UseAsyncCodeString,
+        example_source_url: `${GITHUB_DOCS_EXAMPLE}/example-useasync.tsx`,
         example_component: <ExampleUseAsync />
     },
     'uselastcallback': {
@@ -76,6 +80,7 @@ const hookExamples: { [key: string]: IHookConfig } = {
         import_style: ImportStyle,
         code_style: CodeStyle,
         example_code: UseLastCallbackCodeString,
+        example_source_url: `${GITHUB_DOCS_EXAMPLE}/example-uselastcallback.tsx`,
         example_component: <ExampleUseLastCallback />
     },
     'usetimeout': {
@@ -86,6 +91,7 @@ const hookExamples: { [key: string]: IHookConfig } = {
         import_style: ImportStyle,
         code_style: CodeStyle,
         example_code: UseTimeOutCodeString,
+        example_source_url: `${GITHUB_DOCS_EXAMPLE}/example-usetimeout.tsx`,
         example_component: <ExampleUseTimeOut />
     },
     'useclickoutside': {
@@ -96,6 +102,7 @@ const hookExamples: { [key: string]: IHookConfig } = {
         import_style: ImportStyle,
         code_style: CodeStyle,
         example_code: UseClickOutSideCodeString,
+        example_source_url: `${GITHUB_DOCS_EXAMPLE}/example-useclickoutside.tsx`,
         example_component: <ExampleClickOutSide />
     },
     'usedisclosure': {
@@ -106,6 +113,7 @@ const hookExamples: { [key: string]: IHookConfig } = {
         import_style: ImportStyle,
         code_style: CodeStyle,
         example_code: UseDisclosureCodeString,
+        example_source_url: `${GITHUB_DOCS_EXAMPLE}/example-usedisclosure.tsx`,
         example_component: <ExampleUseDisclosure />
     },
     'usetoggle': {
@@ -116,6 +124,7 @@ const hookExamples: { [key: string]: IHookConfig } = {
         import_style: ImportStyle,
         code_style: CodeStyle,
         example_code: UseToggleCodeString,
+        example_source_url: `${GITHUB_DOCS_EXAMPLE}/example-usetoggle.tsx`,
         example_component: <ExampleUseToggle />
     },
     'uselocalstorage': {
@@ -126,6 +135,7 @@ const hookExamples: { [key: string]: IHookConfig } = {
         import_style: ImportStyle,
         code_style: CodeStyle,
         example_code: UseLocalStorageCodeString,
+        example_source_url: `${GITHUB_DOCS_EXAMPLE}/example-uselocalstorage.tsx`,
         example_component: <ExampleUseLocalStorage />
     },
 };

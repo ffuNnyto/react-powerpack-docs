@@ -10,6 +10,7 @@ interface MainNavProps extends React.HTMLAttributes<HTMLElement> {
 export function MainNav({ className, ...props }: MainNavProps) {
 
   const [value, setValue] = useLocalStorage<string>('current_tab', '0');
+
   return (
     <nav className={cn('flex items-center space-x-4 lg:space-x-6', className)} {...props}>
       <Link
