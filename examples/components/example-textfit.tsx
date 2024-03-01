@@ -1,5 +1,5 @@
-import { Badge } from '@/components/ui/badge';
-import { Separator } from '@/components/ui/separator';
+import { Badge } from '@/src/components/ui/badge';
+import { Separator } from '@/src/components/ui/separator';
 import { TextFit } from 'react-powerpack';
 
 export default function ExampleTextFit() {

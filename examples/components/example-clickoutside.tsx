@@ -1,7 +1,11 @@
-import { Button } from '@/components/ui/button';
-import Code from '@/components/ui/code';
+
+
+
+import Code from '@/src/components/ui/code';
+import { Button } from '@/src/components/ui/button';
 import { useState } from 'react';
 import { ClickOutsideComponent } from 'react-powerpack';
+
 
 export default function ExampleClickOutsideComponent() {
 

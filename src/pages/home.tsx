@@ -1,15 +1,17 @@
-import { NavigationTopMenu } from '../components/navigation/top-navigator'
-import LeftSide from '../components/leftside/leftside'
-import { Title } from '@/components/ui/title'
-import Code from '@/components/ui/code'
-import KeyFeatures from '@/components/home/keyfeatures'
-import FAQ from '@/components/home/faq'
+import FAQ from '@/src/components/home/faq'
+import KeyFeatures from '@/src/components/home/keyfeatures'
+import LeftSide from '@/src/components/leftside/leftside'
+import Code from '@/src/components/ui/code'
+import { Title } from '@/src/components/ui/title'
+import { NavigationTopMenu } from '../components/nav/top-navigator'
+
 
 
 function PageHome() {
 
   return (
     <>
+
 
       <NavigationTopMenu />
       <div className='holy-grail-grid mt-20'>

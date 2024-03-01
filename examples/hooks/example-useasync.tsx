@@ -1,4 +1,4 @@
-import Code from '@/components/ui/code';
+import Code from '@/src/components/ui/code';
 import { Show, useAsync } from 'react-powerpack';
 
 export default function ExampleUseAsync() {

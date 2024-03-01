@@ -1,13 +1,15 @@
-import ExampleClickOutsideComponent from './examples/example-clickoutside';
-import ExampleEach from './examples/example-each';
-import ExampleInfiniteLoader from './examples/example-infiniteloader';
-import ExampleShow from './examples/example-show';
-import ExampleTextFit from './examples/example-textfit';
-import { ClickOutsideComponentCodeString } from './string-code/clickoutside-code';
-import { EachCodeString } from './string-code/each-code';
-import { InfiniteLoaderCodeString } from './string-code/infiniteloader-code';
-import { ShowCodeString } from './string-code/show-code';
-import { TextFitCodeString } from './string-code/textfit-code';
+
+
+import ExampleClickOutsideComponent from '@/examples/components/example-clickoutside';
+import ExampleEach from '@/examples/components/example-each';
+import ExampleInfiniteLoader from '@/examples/components/example-infiniteloader';
+import ExampleShow from '@/examples/components/example-show';
+import ExampleTextFit from '@/examples/components/example-textfit';
+import { ClickOutsideComponentCodeString } from '../../../examples/components/stringcode/clickoutside-code';
+import { EachCodeString } from '../../../examples/components/stringcode/each-code';
+import { InfiniteLoaderCodeString } from '../../../examples/components/stringcode/infiniteloader-code';
+import { ShowCodeString } from '../../../examples/components/stringcode/show-code';
+import { TextFitCodeString } from '../../../examples/components/stringcode/textfit-code';
 
 
 

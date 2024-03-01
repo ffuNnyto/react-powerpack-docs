@@ -4,7 +4,7 @@ import {
     AlertDialogHeader,
     AlertDialogOverlay,
     AlertDialogTrigger,
-} from '@/components/ui/alert-dialog'
+} from '@/src/components/ui/alert-dialog'
 
 import { Input } from '../ui/input';
 import { Link } from 'react-router-dom';

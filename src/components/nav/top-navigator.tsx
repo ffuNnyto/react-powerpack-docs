@@ -1,10 +1,12 @@
+import LeftSideSheet from '@/src/components/leftside/leftside-sheet'
+import SearchDoc from '@/src/components/search/search-doc'
+import { useTheme } from '@/src/components/theme-provider'
+import { Button } from '@/src/components/ui/button'
+import { Search } from '@/src/components/ui/search'
+import { MainNav } from '@/src/components/nav/main-nav'
 
-import LeftSideSheet from '../leftside/leftside-sheet';
-import { useTheme } from '../theme-provider';
-import { Button } from '../ui/button';
-import { Search } from '../ui/search';
-import { MainNav } from './main-nav';
-import SearchDoc from '../search/search-doc';
+
+
 
 export function NavigationTopMenu() {
 

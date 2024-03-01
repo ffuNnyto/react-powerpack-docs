@@ -1,20 +1,20 @@
 
-import ExampleHookUseApi, { RequirementInfo } from './examples/example-useapi';
-import ExampleUseAsync from './examples/example-useasync';
-import ExampleClickOutSide from './examples/example-useclickoutside';
-import ExampleUseDisclosure from './examples/example-usedisclosure';
-import ExampleUseLastCallback from './examples/example-uselastcallback';
-import ExampleUseLocalStorage from './examples/example-uselocalstorage';
-import ExampleUseTimeOut from './examples/example-usetimeout';
-import ExampleUseToggle from './examples/example-usetoggle';
-import { UseApiCodeString } from './string-code/useapi-code';
-import { UseAsyncCodeString } from './string-code/useasync-code';
-import { UseClickOutSideCodeString } from './string-code/useclickoutside-code';
-import { UseDisclosureCodeString } from './string-code/usedisclosure-code';
-import { UseLastCallbackCodeString } from './string-code/uselastcallback-code';
-import { UseLocalStorageCodeString } from './string-code/uselocalstorage-code';
-import { UseTimeOutCodeString } from './string-code/usetimeout-code';
-import { UseToggleCodeString } from './string-code/usetoggle-code';
+import ExampleHookUseApi, { RequirementInfo } from '@/examples/hooks/example-useapi';
+import ExampleUseAsync from '@/examples/hooks/example-useasync';
+import ExampleClickOutSide from '@/examples/hooks/example-useclickoutside';
+import ExampleUseDisclosure from '@/examples/hooks/example-usedisclosure';
+import ExampleUseLastCallback from '@/examples/hooks/example-uselastcallback';
+import ExampleUseLocalStorage from '@/examples/hooks/example-uselocalstorage';
+import ExampleUseTimeOut from '@/examples/hooks/example-usetimeout';
+import ExampleUseToggle from '@/examples/hooks/example-usetoggle';
+import { UseApiCodeString } from '../../../examples/hooks/stringcode/useapi-code';
+import { UseAsyncCodeString } from '../../../examples/hooks/stringcode/useasync-code';
+import { UseClickOutSideCodeString } from '../../../examples/hooks/stringcode/useclickoutside-code';
+import { UseDisclosureCodeString } from '../../../examples/hooks/stringcode/usedisclosure-code';
+import { UseLastCallbackCodeString } from '../../../examples/hooks/stringcode/uselastcallback-code';
+import { UseLocalStorageCodeString } from '../../../examples/hooks/stringcode/uselocalstorage-code';
+import { UseTimeOutCodeString } from '../../../examples/hooks/stringcode/usetimeout-code';
+import { UseToggleCodeString } from '../../../examples/hooks/stringcode/usetoggle-code';
 
 interface IHookConfig {
     title: string

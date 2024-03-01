@@ -1,5 +1,5 @@
-import Code from '@/components/ui/code';
-import { Input } from '@/components/ui/input';
+import Code from '@/src/components/ui/code';
+import { Input } from '@/src/components/ui/input';
 import { useLocalStorage } from 'react-powerpack';
 
 export default function ExampleUseLocalStorage() {

@@ -1,6 +1,6 @@
-import { Button } from '@/components/ui/button'
-import Code from '@/components/ui/code'
-import { Separator } from '@/components/ui/separator'
+import { Button } from '@/src/components/ui/button'
+import Code from '@/src/components/ui/code'
+import { Separator } from '@/src/components/ui/separator'
 import { useState } from 'react'
 import { Each } from 'react-powerpack'
 

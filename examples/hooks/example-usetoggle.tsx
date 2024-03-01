@@ -1,6 +1,6 @@
-import { Checkbox } from '@/components/ui/checkbox';
-import Code from '@/components/ui/code';
-import { Separator } from '@/components/ui/separator';
+import { Checkbox } from '@/src/components/ui/checkbox';
+import Code from '@/src/components/ui/code';
+import { Separator } from '@/src/components/ui/separator';
 import { useToggle } from 'react-powerpack';
 
 export default function ExampleUseToggle() {

@@ -3,7 +3,7 @@ import {
     SheetContent,
     SheetHeader,
     SheetTrigger,
-} from '@/components/ui/sheet'
+} from '@/src/components/ui/sheet'
 import { ReactNode } from 'react'
 import LeftSide from './leftside'
 

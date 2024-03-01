@@ -1,6 +1,6 @@
-import { Button } from '@/components/ui/button';
-import Code from '@/components/ui/code';
-import { Title } from '@/components/ui/title';
+import { Button } from '@/src/components/ui/button';
+import Code from '@/src/components/ui/code';
+import { Title } from '@/src/components/ui/title';
 import { useEffect } from 'react'
 import { Show, useApi } from 'react-powerpack'
 import { Link } from 'react-router-dom';

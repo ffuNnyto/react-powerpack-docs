@@ -1,14 +1,16 @@
-import LeftSide from '@/components/leftside/leftside';
-import { NavigationTopMenu } from '@/components/navigation/top-navigator';
-import { Link, useLocation } from 'react-router-dom';
-import { Separator } from '@/components/ui/separator';
-import { Title } from '@/components/ui/title';
-import Code from '@/components/ui/code';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { getComponentByName } from './components/componentconfig';
+
+
 import { FaGithub } from 'react-icons/fa';
-import { getHookByName } from './hooks/hooksconfig';
 import { Show } from 'react-powerpack';
+import { Link, useLocation } from 'react-router-dom';
+import { getComponentByName } from './components/componentconfig';
+import { getHookByName } from './hooks/hooksconfig';
+import { NavigationTopMenu } from '@/src/components/nav/top-navigator';
+import { Title } from '@/src/components/ui/title';
+import { Separator } from '@/src/components/ui/separator';
+import Code from '@/src/components/ui/code';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/src/components/ui/tabs';
+import LeftSide from '@/src/components/leftside/leftside';
 
 
 
