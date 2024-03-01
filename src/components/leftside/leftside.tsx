@@ -1,7 +1,6 @@
-import { Each, Show, useLocalStorage } from 'react-powerpack'
+import { Each } from 'react-powerpack'
 import { Link, NavLink } from 'react-router-dom'
-import { Separator } from '../ui/separator'
-import { useEffect } from 'react'
+import { Separator } from '@/src/components/ui/separator'
 import { FaGithub, FaTwitter, FaNpm } from 'react-icons/fa';
 import { NavComponents, NavHooks } from '../lib/nav';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/src/components/ui/accordion';
@@ -12,24 +11,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 
 
 export default function LeftSide({ mobile }: { mobile: boolean }) {
-
-    const [toggledComponents, toggleComponents] = useLocalStorage<string>('components_accordion', '0');
-    const [toggledHooks, toggleHooks] = useLocalStorage<string>('hooks_accordion', '0');
-
-    const handleToggleComponents = () =>
-        toggleComponents(toggledComponents === '0' ? '1' : '0')
-
-    const handleToggleHooks = () =>
-        toggleHooks(toggledHooks === '0' ? '1' : '0')
-
-
-
-
-
-
-    useEffect(() => {
-
-    }, [toggledComponents])
 
     return (
 
